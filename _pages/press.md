@@ -1,6 +1,6 @@
 ---
 title: Press
-description: Sample page using the Press layout template.
+description: Articles my work has appeared in!
 layout: press
 permalink: /press/
 ---
