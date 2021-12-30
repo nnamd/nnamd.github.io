@@ -7,15 +7,6 @@ permalink: /about/
 
 Civic Folio is a portfolio website for civic technologists.
 
-## Who it's for
+## Who Am I?
 
-Civic Folio is for anyone, but it's more focused on supporting civic designers and developers interested in building their portfolio websites while learning about open, collaborative tools and ways of working.
-
-## Technology
-
-Civic Folio is built using:
-
-* Jekyll
-* Bootstrap
-* Font Awesome
-* GitHub Pages
+My name is Nnamdi Nwagwu. I'm studying Mechanical Engineering at Cornell University. Right now, I am interested in human-robot interaction and looking to develop and understand novel ways that robotics can be used for distinct groups of people. I've prused oppurtunities in design in order to better contextualiize that pursuit. Video editing and drawing are hobbies of mine too and something I'd love to incoorporate in my future career asprations.
