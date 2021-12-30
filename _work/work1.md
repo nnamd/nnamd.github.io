@@ -1,17 +1,15 @@
 ---
-title: Work example 1
+title: Cornell Autonomous Bicycle
 description: Description of work example 1.
-img-feat: work.png
-website: https://
+img-feat: bike.png
+website: http://ec2-18-223-29-116.us-east-2.compute.amazonaws.com/wiki/index.php/The_New_Bike
 methods:
-  - x
-  - y
-  - z
+  - Rapid Prototyping
+  - Machining
 tools:
-  - Bootstrap
-  - Font Awesome
-  - GitHub
-  - Jekyll
+  - Fusion 360
+  - Inkscape
+
 samples-title: Samples
 sample-img-1: work.png
 sample-img-alt-1: Work example 1 screenshot
