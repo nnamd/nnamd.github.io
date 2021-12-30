@@ -5,7 +5,7 @@ layout: about
 permalink: /about/
 ---
 
-Civic Folio is a portfolio website for civic technologists.
+Gross.
 
 ## Who it's for
 
