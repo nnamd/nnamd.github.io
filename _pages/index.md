@@ -1,10 +1,10 @@
 ---
 layout: home
-title: A portfolio website theme for civic technologists.
+title: A portfolio website for Nnamdi Nwagwu!
 description: Civic Folio is a portfolio website theme for civic technologists.
 about-title: About
 about-img: profile.png
-about-img-alt: Civic Folio
+about-img-alt: Nnamdi Nwagwu
 about-description: Beta.
 about-link: /about/
 cv-text: Resumé
