@@ -14,5 +14,5 @@ work-link: /work/
 press-title: Press
 press-link: /press/
 posts-title: Publications
-posts-link: /posts
+posts-link: /publications/
 ---
