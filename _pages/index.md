@@ -13,6 +13,6 @@ work-title: Work
 work-link: /work/
 press-title: Press
 press-link: /press/
-posts-title: Posts
+posts-title: Publications
 posts-link: /posts
 ---
