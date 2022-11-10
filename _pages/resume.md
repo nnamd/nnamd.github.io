@@ -1,6 +1,6 @@
 ---
 title: Resume
-description: Civic Folio's resume.
+description: Past/Current Work
 permalink: /resume/
 ---
 
