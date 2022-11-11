@@ -28,8 +28,4 @@ sample-img-caption-4: Work example 4 screenshot
 ---
 
 ## Overview
-<img src="https://github.com/nnamd/nnamd.github.io/blob/main/img/step1.gif" width="40" height="40"/>
-![User Case 1](https://github.com/nnamd/nnamd.github.io/blob/main/img/step1.gif)
-![User Case 2](https://github.com/nnamd/nnamd.github.io/blob/main/img/step2.gif)
-![User Case 3](https://github.com/nnamd/nnamd.github.io/blob/main/img/step3.gif)
-
+![Alt text](../../../../../../../../C:/Users/nnamd/OneDrive/Documents/Projects/nnamd.github.io/img/step1.gif)
