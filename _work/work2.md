@@ -11,21 +11,11 @@ tools:
   - Miro
   - Fusion 360
   - TinkerCAD
-  - Jekyll
 samples-title: Samples
 sample-img-1: fineline.jpg
 sample-img-alt-1: Final FineLine prototype 
 sample-img-caption-1: Final FineLine prototype 
-sample-img-2: fineline.jpg
-sample-img-alt-2: Work example 2 screenshot
-sample-img-caption-2: Work example 1 screenshot
-sample-img-3: fineline.jpg
-sample-img-alt-3: Work example 3 screenshot
-sample-img-caption-3: Work example 3 screenshot
-sample-img-4: fineline.jpg
-sample-img-alt-4: Work example 4 screenshot
-sample-img-caption-4: Work example 4 screenshot
 ---
 
 ## Overview
-![Alt text](C:/Users/nnamd/OneDrive/Documents/Projects/nnamd.github.io/img/step1.gif)
+My project, FineLine, is a robot teammate that reduces the mental workload of professional chefs by reimagining the order ticketing system, was presented for the HOT Ed Design Challenge hosted by the Getty’s Group Company for the Hotel of Tomorrow Project, a design summit for the future of hospitality. In this semester-long project, I, in a group of 3, learned to analyze videos of interactions, created storyboards to outline desired interactions, and participated in design reviews. I created, using a combination of CAD, prototyping, and electrical skills, a mechatronic system that showcased the desired functionality of our final product. The excitement of a head chef in response to our preliminary prototype was inspiring and reassuring in ways we wouldn’t had even expected. This journey cemented the importance of placing people at the forefront of robot design and was an overall enjoyable experience that I hope to recreate by enabling others with such technologies.
