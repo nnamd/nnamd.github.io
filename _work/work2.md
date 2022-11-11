@@ -13,7 +13,7 @@ tools:
   - GitHub
   - Jekyll
 samples-title: Samples
-sample-img-1: work.png
+sample-img-1: fineline/fineline.jpg
 sample-img-alt-1: Work example 1 screenshot
 sample-img-caption-1: Work example 1 screenshot
 sample-img-2: work.png
