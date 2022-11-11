@@ -16,7 +16,7 @@ instagram: https://instagram.com
 rss: /rss
 
 # Build settings
-markdown: kramdown
+markdown: GFM
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

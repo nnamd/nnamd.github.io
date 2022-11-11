@@ -28,8 +28,6 @@ sample-img-caption-4: Work example 4 screenshot
 ---
 
 ## Overview
-
-Short description of the project here.
 ![User Case 1](https://github.com/nnamd/nnamd.github.io/blob/main/img/step1.gif)
 ![User Case 2](https://github.com/nnamd/nnamd.github.io/blob/main/img/step2.gif)
 ![User Case 3](https://github.com/nnamd/nnamd.github.io/blob/main/img/step3.gif)
