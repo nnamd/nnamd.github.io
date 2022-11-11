@@ -14,8 +14,8 @@ tools:
   - Jekyll
 samples-title: Samples
 sample-img-1: fineline.jpg
-sample-img-alt-1: Work example 1 screenshot
-sample-img-caption-1: Work example 1 screenshot
+sample-img-alt-1: Final FineLine prototype 
+sample-img-caption-1: Final FineLine prototype 
 sample-img-2: fineline.jpg
 sample-img-alt-2: Work example 2 screenshot
 sample-img-caption-2: Work example 1 screenshot
@@ -30,4 +30,5 @@ sample-img-caption-4: Work example 4 screenshot
 ## Overview
 
 Short description of the project here.
+![Evicted](https://drive.google.com/file/d/18sOMEEv15_31jksvhivESwEb8xgWC6ru/view?usp=sharing)
 
