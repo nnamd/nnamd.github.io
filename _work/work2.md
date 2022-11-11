@@ -28,4 +28,4 @@ sample-img-caption-4: Work example 4 screenshot
 ---
 
 ## Overview
-![Alt text](../../../../../../../../C:/Users/nnamd/OneDrive/Documents/Projects/nnamd.github.io/img/step1.gif)
+![Alt text](C:/Users/nnamd/OneDrive/Documents/Projects/nnamd.github.io/img/step1.gif)
