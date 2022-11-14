@@ -1,4 +1,3 @@
----
 title: ErgoCon
 description: Description of work example 3.
 img-feat: work.png

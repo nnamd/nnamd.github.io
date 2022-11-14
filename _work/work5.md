@@ -1,17 +1,16 @@
 ---
-title: ErgoCon
-description: Description of work example 3.
+title: "Lighty Light Zoom Zoom"
+description: ECE 3140
 img-feat: work.png
 website: https://
 methods:
-  - x
+  - PWM
   - y
   - z
 tools:
-  - Bootstrap
-  - Font Awesome
+  - C
   - GitHub
-  - Jekyll
+  - Freedom Development Board
 samples-title: Samples
 sample-img-1: work.png
 sample-img-alt-1: Work example 1 screenshot
@@ -30,3 +29,5 @@ sample-img-caption-4: Work example 4 screenshot
 ## Overview
 
 Short description of the project here.
+
+Link to [project page](https://pages.github.coecis.cornell.edu/ece3140-sp2020/aky26-nan46/) and [showcase video]()

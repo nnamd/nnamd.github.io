@@ -1,7 +1,7 @@
 ---
 title: FineLine
 description: CS 4754 Project
-img-feat: work.png
+img-feat: fineline.jpg
 website: https://
 methods:
   - Video Analysis
