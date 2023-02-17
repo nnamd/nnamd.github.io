@@ -8,8 +8,7 @@ methods:
   - y
   - z
 tools:
-  - Bootstrap
-  - Font Awesome
+  - Eagle
   - GitHub
   - Jekyll
 samples-title: Samples
