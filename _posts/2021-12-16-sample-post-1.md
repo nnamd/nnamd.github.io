@@ -1,10 +1,8 @@
 ---
-title:  "Sample post 1"
-description: The is the post description.
+title:  "Nothing yet, stay tuned!"
+description: Pending
 date: 2021-12-16
-author: Civic Folio
+author: Nnamdi Nwagwu
 ---
 
-The is the description of the post. The is the description of the post. The is the description of the post. The is the description of the post. The is the description of the post.
-
-The is the description of the post. The is the description of the post. The is the description of the post. The is the description of the post. The is the description of the post.
+Placeholder.

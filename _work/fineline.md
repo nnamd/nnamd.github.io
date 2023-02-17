@@ -1,6 +1,6 @@
 ---
 title: FineLine
-description: Cornell - CS 4754 Project
+description: Interaction design 
 img-feat: fineline.jpg
 website: https://
 methods:
