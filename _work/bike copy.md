@@ -1,27 +1,28 @@
 ---
 title: Admittance Control of Bravo 7
 description: Dynamics & Controls
-img-feat: initial_config.jpg
+img-feat: bike.png
 website: 
 methods:
-  - Simulation
-  - Admittance Control
+  - Rapid Prototyping
+  - Machining
 tools:
-  - MATLAB
+  - Fusion 360
+  - Inkscape
 
 samples-title: Samples
-sample-img-1: sim_results.gif
-sample-img-alt-1: Bravo Arm Simulation 
-sample-img-caption-1: Gif of Simulated Forces on Bravo Arm
-
-sample-img-2: admittance_sim_plot.png
-sample-img-alt-2: Admittance Control Sim Plot
-sample-img-caption-2: The real admittance controller response on the Bravo 7 when force
-is applied to the manipulator’s end effector
-sample-img-3: final_graph_hardware.png
-sample-img-alt-3: Admittance Control On Hardware Graph
-sample-img-caption-3: The simulated admittance controller demonstrates compliance when
-a 25N force is applied to the manipulator’s end effector
+sample-img-1: bike.png
+sample-img-alt-1: Full CAD of new bike
+sample-img-caption-1: Full CAD of new bike
+sample-img-2: acrylic.jpg
+sample-img-alt-2: Work example 2 screenshot
+sample-img-caption-2: Acrylic for electronics mounted to bike
+sample-img-3: topframebracket.jpg
+sample-img-alt-3: Top Frame Bracket Mounted
+sample-img-caption-3: Top Frame Bracket Mounted
+sample-img-4: bottomframebracket.jpg
+sample-img-alt-4: Bottom Frame Bracket Mounted
+sample-img-caption-4: Bottom Frame Bracket Mounted
 ---
 
 ## Overview
