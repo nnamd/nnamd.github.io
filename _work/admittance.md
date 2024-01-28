@@ -27,9 +27,6 @@ a 25N force is applied to the manipulator’s end effector
 
 ## Overview
 
-<video width="480" height="320" controls>
-  <source src="hardware.mp4" type="video/mp4">
-</video>
 
 
 ### Abstract
