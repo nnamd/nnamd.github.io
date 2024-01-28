@@ -24,4 +24,8 @@ sample-img-caption-3: The simulated admittance controller demonstrates complianc
 
 ## Overview
 
+<video width="480" height="320" controls>
+  <source src="hardware.mp4" type="video/mp4">
+</video>
+
 Underwater manipulation tasks require precise manipulator and vehicle control to safely complete tasks like environmental sampling and dock maintenance. As underwater vehicle-manipulator systems (UVMS) are subject to complex hydrodynamic motions, UVMS must account for any undesired dynamic changes or external forces that occur during a manipulation task. In this paper, we propose an admittance control law that uses measured end-effector forces to determine the compliant motion required to minimize interaction forces. With this approach, we demonstrate, both in simulation and hardware, results for compliant motion of a manipulator that minimizes interaction forces.
