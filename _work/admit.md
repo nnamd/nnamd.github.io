@@ -4,11 +4,11 @@ description: Dynamics & Controls
 img-feat: initial_config.jpg
 website: 
 methods:
-  - Rapid Prototyping
-  - Machining
+  - Simulation
+  - Admittance Control
 tools:
-  - Fusion 360
-  - Inkscape
+  - MATLAB
+  - Python
 
 samples-title: Samples
 sample-img-1: sim_results.gif
