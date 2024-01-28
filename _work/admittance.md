@@ -1,7 +1,7 @@
 ---
 title: Admittance Control of Bravo 7
 description: Dynamics & Controls
-img-feat: initial_config.png
+img-feat: initial_config.jpg
 website: 
 methods:
   - Simulation
