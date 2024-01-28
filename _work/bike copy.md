@@ -11,9 +11,9 @@ tools:
   - Inkscape
 
 samples-title: Samples
-sample-img-1: bike.png
-sample-img-alt-1: Full CAD of new bike
-sample-img-caption-1: Full CAD of new bike
+sample-img-1: sim_results.gif
+sample-img-alt-1: Bravo Arm Simulation 
+sample-img-caption-1: Gif of Simulated Forces on Bravo Arm
 sample-img-2: acrylic.jpg
 sample-img-alt-2: Work example 2 screenshot
 sample-img-caption-2: Acrylic for electronics mounted to bike
