@@ -1,7 +1,7 @@
 ---
 title: Emotional Expression (CNN)
 description: Machine Learning
-img-feat: initial_config.jpg
+img-feat: cnn.png
 website: 
 methods:
   - Convolutional Neural Network
