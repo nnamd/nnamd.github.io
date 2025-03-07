@@ -3,9 +3,9 @@ layout: home
 title: Nnamdi Nwagwu
 description: Everything Nnamdi Nwagwu.
 about-title: About
-about-img: profile_new.jpg
+about-img: cnn.png
 about-img-alt: Nnamdi Nwagwu
-about-description: testing 
+about-description: Hi My Name is Nnamdi 
 about-link: /about/
 cv-text: Resumé/CV
 cv-link: /resume
