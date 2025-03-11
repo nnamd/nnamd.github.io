@@ -7,7 +7,7 @@ methods:
   - Classical Machine Learning
   - Feature Importance
 tools:
-  - SKLearn/Sci-Kit
+  - SkLearn/Sci-Kit
   - Python
   - R
 
