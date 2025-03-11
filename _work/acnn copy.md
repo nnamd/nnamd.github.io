@@ -13,7 +13,6 @@ tools:
 
 
 samples-title: Samples
-
 sample-img-1: Flow.png
 sample-img-alt-1: Flow Image 
 sample-img-caption-1: Example Image of Stylized Demonstration From Participant (Flow)
