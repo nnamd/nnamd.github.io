@@ -1,10 +1,7 @@
 ---
-title: "Should Assistive Feeding with the Stretch Robot Use Expressive Motion?"
-description: Triniti Armstrong*, Nnamdi Nwagwu*, Naomi Fitter. 
-date: 2021-12-16
-author: Civic Folio
+title: "Speaking out for Speakers, A Guide and Analysis for Robot Speakers to Facilitate More Consistent HRI” 
+
+description: Frontiers of Robotics and AI 2024
+author: Nnamdi Nwagwu, Adeline Schneider, Tyler K. Phelps, Brian J. Zhang, and Naomi T. Fitter.
 ---
 
-The is the description of the post. The is the description of the post. The is the description of the post. The is the description of the post. The is the description of the post.
-
-The is the description of the post. The is the description of the post. The is the description of the post. The is the description of the post. The is the description of the post.

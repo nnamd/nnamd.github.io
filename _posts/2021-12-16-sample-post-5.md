@@ -1,10 +1,7 @@
 ---
-title: "Should Assistive Feeding with the Stretch Robot Use Expressive Motion?"
-description: Triniti Armstrong*, Nnamdi Nwagwu*, Naomi Fitter. 
-date: 2021-12-16
-author: Civic Folio
+title: "The Benefits of Sound Resound: An In-Person Replication of the Ability of Character-Like Robot Sound to Improve Perceived Social Warmth” 
+
+description: Robotics, Science and Systems 2024 
+author: Nnamdi Nwagwu, Adeline Schneider, Tyler K. Phelps, Brian J. Zhang, and Naomi T. Fitter.
 ---
 
-The is the description of the post. The is the description of the post. The is the description of the post. The is the description of the post. The is the description of the post.
-
-The is the description of the post. The is the description of the post. The is the description of the post. The is the description of the post. The is the description of the post.
