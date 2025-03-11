@@ -4,17 +4,17 @@ description: Front and Back End
 img-feat: Cardiac_App.png
 website: 
 methods:
-  - Convolutional Neural Network
-  - Admittance Control
+  - Front End
+  - Server Management
 tools:
   - Python
-  - Pytorch
+  - Flutter & Dart
+  - Docker
 
 
 samples-title: Samples
-
 sample-img-1: Cardiac_App.png
-sample-img-alt-1: CNN Architecture 
+sample-img-alt-1: App Overview
 sample-img-caption-1: App Overview
 
 
