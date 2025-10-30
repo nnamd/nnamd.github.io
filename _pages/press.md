@@ -1,6 +1,6 @@
 ---
-title: Press
-description: Articles my work has appeared in!
+title: Publications
+description: Published/ In-review work
 layout: press
 permalink: /press/
 ---
