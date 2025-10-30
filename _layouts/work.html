@@ -4,69 +4,64 @@ layout: work
 {% include header.html %}
 {% include nav.html %}
 <main>
-    {% include jumbotron.html %}
-    <div class="container-fluid">
-  <div class="row">
-    <!-- Main content -->
-    <div class="col-lg-8 col-md-7 col-sm-12">
-      {{ content | markdownify }}
+  <div class="container-fluid">
+    <div class="row align-items-start">
+      <!-- Left side: title/jumbotron + main content -->
+      <div class="col-lg-8 col-md-7 col-sm-12">
+        {% include jumbotron.html %}
+        {{ content | markdownify }}
 
-      <div class="row mt-4">
-        <div class="col-sm-6">
-          {% if page.methods %}
-          {% if post %}
-          {% assign methods = post.methods %}
-          {% else %}
-          {% assign methods = page.methods %}
-          {% endif %}
-          <h2>Methods</h2>
-          <ul>
-            {% for method in methods %}
-            <li>{{ method }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-        </div>
-        <div class="col-sm-6">
-          {% if page.tools %}
-          {% if post %}
-          {% assign tools = post.tools %}
-          {% else %}
-          {% assign tools = page.tools %}
-          {% endif %}
-          <h2>Tools</h2>
-          <ul>
-            {% for tool in tools %}
-            <li>{{ tool }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
+        <div class="row mt-4">
+          <div class="col-sm-6">
+            {% if page.methods %}
+            {% assign methods = page.methods %}
+            <h2>Methods</h2>
+            <ul>
+              {% for method in methods %}
+              <li>{{ method }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+          <div class="col-sm-6">
+            {% if page.tools %}
+            {% assign tools = page.tools %}
+            <h2>Tools</h2>
+            <ul>
+              {% for tool in tools %}
+              <li>{{ tool }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Sidebar: Samples -->
-    <div class="col-lg-4 col-md-5 col-sm-12">
-      {% if page.samples-title %}
-      <h2 class="mt-3">{{ page.samples-title }}</h2>
-      {% endif %}
-
-      <div class="samples">
-        {% for i in (1..4) %}
-        {% assign img = "sample-img-" | append: i %}
-        {% assign alt = "sample-img-alt-" | append: i %}
-        {% assign caption = "sample-img-caption-" | append: i %}
-        {% if page[img] %}
-        <figure class="mb-3">
-          <img src="{{ site.baseurl }}/img/work/{{ page[img] }}" alt="{{ page[alt] }}" class="img-fluid rounded shadow-sm">
-          <figcaption class="small text-muted">{{ page[caption] }}</figcaption>
-        </figure>
+      <!-- Right side: samples start at the top -->
+      <!-- Right side: samples start at the top -->
+        <div class="col-lg-4 col-md-5 col-sm-12 d-flex flex-column align-items-start">
+        {% if page.samples-title %}
+        <h2 class="mb-3">{{ page.samples-title }}</h2>
         {% endif %}
-        {% endfor %}
-      </div>
+
+        <div class="samples-grid w-100">
+            {% for i in (1..4) %}
+            {% assign img = "sample-img-" | append: i %}
+            {% assign alt = "sample-img-alt-" | append: i %}
+            {% assign caption = "sample-img-caption-" | append: i %}
+            {% if page[img] %}
+            <figure class="sample-item">
+            <img src="{{ site.baseurl }}/img/work/{{ page[img] }}" alt="{{ page[alt] }}" class="img-fluid sample-img">
+            {% if page[caption] %}
+            <figcaption class="sample-caption">{{ page[caption] }}</figcaption>
+            {% endif %}
+            </figure>
+            {% endif %}
+            {% endfor %}
+        </div>
+        </div>
+
     </div>
   </div>
-</div>
-
 </main>
 {% include footer.html %}
