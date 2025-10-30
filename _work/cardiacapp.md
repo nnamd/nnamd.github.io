@@ -1,7 +1,7 @@
 ---
 title: The Code Runner 
 description: Front and Back End
-img-feat: Cardiac_App.png
+img-feat: The_Code_Runner_Pro.png
 website: 
 methods:
   - Front End
@@ -22,7 +22,6 @@ sample-img-3: IOS-Final.png
 
 sample-img-4: final_pdf_iphone.png
 
-sample-img-5: final_history_iphone.png
 
 
 
