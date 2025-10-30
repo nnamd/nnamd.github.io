@@ -1,5 +1,5 @@
 ---
-title: Emotional Expression (CNN)
+title: Speech-based Classification
 description: Machine Learning
 img-feat: spectrogram.png
 website: 
