@@ -54,9 +54,13 @@ layout: work
       {% if page[img] %}
       <div class="col-6">
         <figure class="text-center">
-          <img src="{{ site.baseurl }}/img/work/{{ page[img] }}"
-               alt="{{ page[alt] }}"
-               class="img-fluid rounded">
+          <img
+  src="{{ site.baseurl }}/img/work/{{ page[img] }}"
+  alt="{{ page[alt] }}"
+  class="img-fluid rounded"
+  style="transition: transform 0.3s ease; cursor: pointer;"
+  onmouseover="this.style.transform='scale(1.1)'"
+  onmouseout="this.style.transform='scale(1)'">
           {% if page[caption] %}
           <figcaption class="small text-muted">{{ page[caption] }}</figcaption>
           {% endif %}
