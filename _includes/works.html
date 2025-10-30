@@ -1,19 +1,35 @@
-<div class="card-deck">
-    {% for page in site.work limit:limitVar %}
-    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
-        <div class="card">
-            <div class="card-body">
-                {% if page.img-feat %}
-                <img src="{{ site.baseurl }}/img/work/{{ page.img-feat }}" alt="{{ page.img-alt }}" class="card-img-top mb-4 lg">
-                {% endif %}
-                <h3>
-                    <a href="{{ site.baseurl }}{{ page.url }}" class="stretched-link">
-                        {{ page.title }}
-                    </a>
-                </h3>
-                <p class="card-text">{{ page.description }}</p>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
+<div class="row g-3">
+  {% assign works_to_show = site.work %}
+  {% if include.limit %}
+    {% assign works_to_show = works_to_show | slice: 0, include.limit %}
+  {% endif %}
+
+  {% for work in works_to_show %}
+  <div class="col-6 col-md-4 col-lg-3">
+    <a href="{{ work.url }}" class="text-decoration-none text-dark">
+      <!-- Square image container -->
+      <div style="
+        position: relative;
+        width: 100%;
+        padding-top: 100%; /* forces square */
+        overflow: hidden;
+        border-radius: 0.5rem;
+        background-color: #f8f9fa;
+      ">
+        <img
+          src="{{ site.baseurl }}/img/work/{{ work.image }}"
+          alt="{{ work.title }}"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          ">
+      </div>
+      <h5 class="mt-2 text-center">{{ work.title }}</h5>
+    </a>
+  </div>
+  {% endfor %}
 </div>
