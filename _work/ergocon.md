@@ -1,8 +1,8 @@
 ---
 title: 
 description: ErgoCon
-img-feat: full_ergo.png
-website: https://
+img-feat: ergo_disp.png
+website: 
 methods:
   - PCB design
   - User Research
