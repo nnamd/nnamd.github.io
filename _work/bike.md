@@ -1,6 +1,6 @@
 ---
-title: Cornell Autonomous Bicycle
-description: Mechanical design and leadership
+title: Autonomous Bicycle
+description: Mechanical Design
 img-feat: bike.png
 website: 
 methods:

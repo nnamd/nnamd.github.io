@@ -4,19 +4,7 @@
         <div class="card">
             <div class="card-body">
                 {% if page.img-feat %}
-                <div style="
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  background-color: #f8f9fa;
-">
-  <img
-    src="{{ site.baseurl }}/img/work/{{ page.img-feat }}" alt="{{ page.img-alt }}"
-    class="w-100 h-100"
-    style="object-fit: cover;">
-</div>
-
+                <img src="{{ site.baseurl }}/img/work/{{ page.img-feat }}" alt="{{ page.img-alt }}" class="card-img-top mb-4 lg">
                 {% endif %}
                 <h3>
                     <a href="{{ site.baseurl }}{{ page.url }}" class="stretched-link">

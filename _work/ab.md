@@ -1,6 +1,6 @@
 ---
 title: The Code Runner 
-description: Front and Back End
+description: Full-stack App Development
 img-feat: app_logo.png
 website: 
 methods:

@@ -1,6 +1,6 @@
 ---
-title: 
-description: ErgoCon
+title: Ergocon
+description: Embedded Systems & PCB Design
 img-feat: ergo_disp.png
 website: 
 methods:
