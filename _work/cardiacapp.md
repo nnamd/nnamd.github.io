@@ -12,10 +12,21 @@ tools:
   - Docker
 
 
-samples-title: Samples
-sample-img-1: Cardiac_App.png
-sample-img-alt-1: App Overview
-sample-img-caption-1: App Overview
+samples-title: Screenshots
+sample-img-1: IOS_Final_Main_change.png
+
+sample-img-2: final_timer_iphone.png
+
+
+sample-img-3: IOS-Final.png
+
+sample-img-4: final_pdf_iphone.png
+
+sample-img-5: final_history_iphone.png
+
+
+
+
 
 
 ---
