@@ -1,7 +1,7 @@
 ---
 title: The Code Runner 
 description: Front and Back End
-img-feat: The_Code_Runner_Pro.png
+img-feat: app_logo.png
 website: 
 methods:
   - Front End
@@ -10,10 +10,11 @@ tools:
   - Python
   - Flutter & Dart
   - Docker
+  - AWS EC2, RDS
 
 
 samples-title: Screenshots
-sample-img-1: IOS_Final_Main_change.png
+sample-img-1: IOS-Final_Main_change.png
 
 sample-img-2: final_timer_iphone.png
 
