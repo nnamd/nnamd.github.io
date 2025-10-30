@@ -40,40 +40,42 @@ layout: work
       <!-- Right side: samples start at the top -->
       <!-- Right side: samples start at the top -->
         <!-- Right side: samples start at the top -->
-<div class="col-lg-4 col-md-5 col-sm-12">
+<!-- Right side: samples start at the top -->
+<div class="col-lg-4 col-md-5 col-sm-12 d-flex flex-column align-items-start">
   {% if page.samples-title %}
   <h2 class="mb-3">{{ page.samples-title }}</h2>
   {% endif %}
 
-  <div class="container-fluid">
-    <div class="row g-2">
-      {% for i in (1..4) %}
-      {% assign img = "sample-img-" | append: i %}
-      {% assign alt = "sample-img-alt-" | append: i %}
-      {% assign caption = "sample-img-caption-" | append: i %}
-      {% if page[img] %}
-      <div class="col-6">
-        <figure class="text-center">
-          <img
-  src="{{ site.baseurl }}/img/work/{{ page[img] }}"
-  alt="{{ page[alt] }}"
-  class="img-fluid rounded"
-  style="transition: transform 0.3s ease; cursor: pointer;"
-  onmouseover="this.style.transform='scale(1.1)'"
-  onmouseout="this.style.transform='scale(1)'">
-          {% if page[caption] %}
-          <figcaption class="small text-muted">{{ page[caption] }}</figcaption>
-          {% endif %}
-        </figure>
-      </div>
+  <div class="samples-grid w-100">
+    {% for i in (1..4) %}
+    {% assign img = "sample-img-" | append: i %}
+    {% assign alt = "sample-img-alt-" | append: i %}
+    {% assign caption = "sample-img-caption-" | append: i %}
+    {% if page[img] %}
+    <figure class="sample-item">
+      <img src="{{ site.baseurl }}/img/work/{{ page[img] }}" alt="{{ page[alt] }}" class="img-fluid sample-img">
+      {% if page[caption] %}
+      <figcaption class="sample-caption">{{ page[caption] }}</figcaption>
       {% endif %}
-      {% endfor %}
-    </div>
+    </figure>
+    {% endif %}
+    {% endfor %}
   </div>
 </div>
 
 
+
     </div>
   </div>
+
+
+<!-- Bootstrap modal for enlarging images -->
+<div class="modal fade" id="sampleModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <img id="modalImage" src="" alt="" class="img-fluid rounded">
+    </div>
+  </div>
+</div>  
 </main>
 {% include footer.html %}
