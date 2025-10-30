@@ -1,11 +1,10 @@
 ---
 title: Emotional Expression (CNN)
 description: Machine Learning
-img-feat: cnn.png
+img-feat: spectrogram.png
 website: 
 methods:
   - Convolutional Neural Network
-  - Admittance Control
 tools:
   - Python
   - Pytorch
@@ -16,6 +15,9 @@ samples-title: Samples
 sample-img-1: cnn.png
 sample-img-alt-1: CNN Architecture 
 sample-img-caption-1: Architecture of Convolutional Network
+
+sample-img-2: spectrogram_labeled.png
+sample-img-alt-2: Spectrogram Examples
 
 
 ---

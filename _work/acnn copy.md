@@ -1,7 +1,7 @@
 ---
 title: Classification and Dataset Collection For the Laban Efforts 
 description: Machine Learning
-img-feat: Space.png
+img-feat: Effort_Classifier.png
 website: 
 methods:
   - Classical Machine Learning
