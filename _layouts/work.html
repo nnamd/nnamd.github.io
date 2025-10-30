@@ -7,84 +7,63 @@ layout: work
     {% include jumbotron.html %}
     <div class="container">
         <div class="row">
+            <!-- Main content -->
             <div class="col-sm-8">
                 {{ content | markdownify }}
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        {% if page.methods %}
+                        {% if post %}
+                        {% assign methods = post.methods %}
+                        {% else %}
+                        {% assign methods = page.methods %}
+                        {% endif %}
+                        <h2>Methods</h2>
+                        <ul>
+                            {% for method in methods %}
+                            <li>{{ method }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    <div class="col-sm-6">
+                        {% if page.tools %}
+                        {% if post %}
+                        {% assign tools = post.tools %}
+                        {% else %}
+                        {% assign tools = page.tools %}
+                        {% endif %}
+                        <h2>Tools</h2>
+                        <ul>
+                            {% for tool in tools %}
+                            <li>{{ tool }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-4"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                {% if page.methods %}
-            {% if post %}
-            {% assign methods = post.methods %}
-            {% else %}
-            {% assign methods = page.methods %}
-            {% endif %}
-                <h2>Methods</h2>
-                <ul>
-                    {% for method in methods %}
-                    <li>
-                        {{ method }}
-                    </li>
-                    {% unless forloop.last %}{% endunless %}
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            </div>
-            <div class="col-sm-6">
-                {% if page.tools %}
-                {% if post %}
-                {% assign tools = post.tools %}
-                {% else %}
-                {% assign tools = page.tools %}
-                {% endif %}
-                <h2>Tools</h2>
-                <ul>
-                    {% for tool in tools %}
-                    <li>
-                        {{ tool }}
-                    </li>
-                    {% unless forloop.last %}{% endunless %}
-                        {% endfor %}
-                </ul>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        {% if page.samples-title %}
-        <div class="row">
-            <div class="col-12">
+
+            <!-- Sidebar: Samples -->
+            <div class="col-sm-4">
+                {% if page.samples-title %}
                 <h2>{{ page.samples-title }}</h2>
-            </div>
-        </div>
-        {% endif %}
-        <div class="row">
-            <div class="col-sm-6">
-                <figure>
-                    <img src="{{ site.baseurl }}/img/work/{{ page.sample-img-1 }}" alt="{{ page.sample-img-alt-1 }}">
-                    <figcaption>{{ page.sample-img-caption-1 }}</figcaption>
-                </figure>
-            </div>
-            <div class="col-sm-6">
-                <figure>
-                    <img src="{{ site.baseurl }}/img/work/{{ page.sample-img-2 }}" alt="{{ page.sample-img-alt-2 }}">
-                    <figcaption>{{ page.sample-img-caption-2 }}</figcaption>
-                </figure>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <figure>
-                    <img src="{{ site.baseurl }}/img/work/{{ page.sample-img-3 }}" alt="{{ page.sample-img-alt-1 }}">
-                    <figcaption>{{ page.sample-img-caption-3 }}</figcaption>
-                </figure>
-            </div>
-            <div class="col-sm-6">
-                <figure>
-                    <img src="{{ site.baseurl }}/img/work/{{ page.sample-img-4 }}" alt="{{ page.sample-img-alt-2 }}">
-                    <figcaption>{{ page.sample-img-caption-4 }}</figcaption>
-                </figure>
+                {% endif %}
+
+                <div class="samples">
+                    {% for i in (1..4) %}
+                    {% assign img = "sample-img-" | append: i %}
+                    {% assign alt = "sample-img-alt-" | append: i %}
+                    {% assign caption = "sample-img-caption-" | append: i %}
+                    {% if page[img] %}
+                    <figure style="margin-bottom: 1.5rem;">
+                        <img src="{{ site.baseurl }}/img/work/{{ page[img] }}" alt="{{ page[alt] }}" class="img-fluid">
+                        <figcaption>{{ page[caption] }}</figcaption>
+                    </figure>
+                    {% endif %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
