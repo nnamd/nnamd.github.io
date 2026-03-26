@@ -5,7 +5,14 @@ layout: work
 {% include nav.html %}
 <main>
   <div class="container-fluid" style="padding-left: 1in; padding-right: 1in;">
-    <!-- Samples Section at Top -->
+    <!-- Jumbotron/Title at very top -->
+    <div class="row mb-4">
+      <div class="col-12">
+        {% include jumbotron.html %}
+      </div>
+    </div>
+
+    <!-- Samples Section -->
     {% assign has_videos = false %}
     {% for i in (1..4) %}
     {% assign video = "sample-video-" | append: i %}
@@ -17,9 +24,9 @@ layout: work
 
     {% if page.samples-title or has_videos %}
     <div class="row mb-4">
-      {% if page.samples-title %}
+      <!-- {% if page.samples-title %}
       <h2 class="mb-3">{{ page.samples-title }}</h2>
-      {% endif %}
+      {% endif %} -->
       
       <!-- Video on the left (double height) -->
       {% if has_videos %}
@@ -83,7 +90,6 @@ layout: work
     <!-- Main content -->
     <div class="row">
       <div class="col-12">
-        {% include jumbotron.html %}
         {{ content | markdownify }}
       </div>
     </div>
