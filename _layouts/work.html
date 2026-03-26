@@ -22,22 +22,22 @@ layout: work
     
     {% if samples_layout == 'line' %}
     <!-- Samples in a single line -->
-    <div class="row mb-4 g-0" style="margin-left: 0; margin-right: 0; overflow-x: auto;">
-      {% if page.samples-title %}
+    <div class="mb-4" style="display: flex; flex-wrap: wrap; gap: 0; margin-left: 0; margin-right: 0;">
+      <!-- {% if page.samples-title %}
       <h2 class="mb-3" style="width: 100%;">{{ page.samples-title }}</h2>
-      {% endif %}
+      {% endif %} -->
       
       <!-- Video in line -->
       {% if has_videos %}
-      <div style="flex: 0 0 25%; padding-left: 0; padding-right: 0; min-width: 200px;">
+      <div style="flex: 0 0 25%; padding-left: 0; padding-right: 0; min-width: 200px; position: relative; overflow: visible;">
         {% for i in (1..1) %}
         {% assign video = "sample-video-" | append: i %}
         {% assign video_caption = "sample-video-caption-" | append: i %}
         {% if page[video] %}
-        <figure class="text-center m-0">
+        <figure class="text-center m-0" style="position: relative;">
           <video
             class="img-fluid"
-            style="width: 100%; height: auto; background: #000; display: block;"
+            style="width: 100%; height: auto; background: #000; display: block; position: relative; z-index: 1;"
             controls
             preload="metadata">
             <source src="{{ site.baseurl }}/img/work/{{ page[video] }}" type="video/mp4">

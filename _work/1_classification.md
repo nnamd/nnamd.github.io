@@ -1,5 +1,5 @@
 ---
-title: Classifying Stylized Robot Motion
+title: Classifying Robot Style
 description: Machine Learning
 img-feat: Effort_Classifier.png
 website: 
