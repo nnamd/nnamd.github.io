@@ -4,13 +4,15 @@ layout: work
 {% include header.html %}
 {% include nav.html %}
 <main>
-  <div class="container-fluid" style="padding-left: 1in; padding-right: 1in;">
+  <div class="container-fluid" style="padding-left: 3in; padding-right: 3in;">
     <!-- Jumbotron/Title at very top -->
     <div class="row mb-4">
       <div class="col-12">
         {% include jumbotron.html %}
       </div>
     </div>
+
+
 
     <!-- Samples Section -->
     {% assign has_videos = false %}
@@ -60,7 +62,7 @@ layout: work
           {% for i in (1..4) %}
           {% assign img = "sample-img-" | append: i %}
           {% assign alt = "sample-img-alt-" | append: i %}
-          {% assign caption = "sample-img-caption-" | append: i %}
+          <!-- {% assign caption = "sample-img-caption-" | append: i %} -->
           {% if page[img] %}
           <div class="col-6">
             <figure class="text-center m-0">
@@ -86,7 +88,16 @@ layout: work
       </div>
     </div>
     {% endif %}
-
+    
+    <div class="row mb-4">
+      <div class="col-12">
+                {% if page.description %}
+                <p class="lead">{{ page.description }}</p>
+                {% endif %}
+      </div>
+    </div>
+    
+    
     <!-- Main content -->
     <div class="row">
       <div class="col-12">
