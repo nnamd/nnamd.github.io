@@ -4,13 +4,13 @@ layout: work
 {% include header.html %}
 {% include nav.html %}
 <main>
+  <!-- Jumbotron/Title - full width, centered -->
+  <div class="container-fluid" style="padding-left: 0; padding-right: 0;">
+    {% include jumbotron.html %}
+  </div>
+  
+  <!-- Rest of content with 1-inch margins -->
   <div class="container-fluid" style="padding-left: 1in; padding-right: 1in;">
-    <!-- Jumbotron/Title at very top -->
-    <div class="row mb-4">
-      <div class="col-12">
-        {% include jumbotron.html %}
-      </div>
-    </div>
 
 
 
@@ -30,9 +30,9 @@ layout: work
     {% if samples_layout == 'line' %}
     <!-- Samples in a single line -->
     <div class="row mb-4 g-0" style="margin-left: 0; margin-right: 0; overflow-x: auto;">
-      <!-- {% if page.samples-title %}
+      {% if page.samples-title %}
       <h2 class="mb-3" style="width: 100%;">{{ page.samples-title }}</h2>
-      {% endif %} -->
+      {% endif %}
       
       <!-- Video in line -->
       {% if has_videos %}
