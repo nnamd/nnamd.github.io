@@ -10,7 +10,6 @@ layout: work
       <div class="col-lg-8 col-md-7 col-sm-12">
         {% include jumbotron.html %}
         {{ content | markdownify }}
-
         <div class="row mt-4">
           <div class="col-sm-6">
             {% if page.methods %}
@@ -36,54 +35,136 @@ layout: work
           </div>
         </div>
       </div>
-
       <!-- Right side: samples start at the top -->
-      <!-- Right side: samples start at the top -->
-        <!-- Right side: samples start at the top -->
-<div class="col-lg-4 col-md-5 col-sm-12">
-  {% if page.samples-title %}
-  <h2 class="mb-3">{{ page.samples-title }}</h2>
-  {% endif %}
+      <div class="col-lg-4 col-md-5 col-sm-12">
+        {% if page.samples-title %}
+        <h2 class="mb-3">{{ page.samples-title }}</h2>
+        {% endif %}
+        <div class="container-fluid">
+          <!-- Images Section -->
+          <div class="row g-2">
+            {% for i in (1..4) %}
+            {% assign img = "sample-img-" | append: i %}
+            {% assign alt = "sample-img-alt-" | append: i %}
+            {% assign caption = "sample-img-caption-" | append: i %}
+            {% if page[img] %}
+            <div class="col-6">
+              <figure class="text-center">
+                <img
+                  src="{{ site.baseurl }}/img/work/{{ page[img] }}"
+                  alt="{{ page[alt] }}"
+                  class="img-fluid rounded"
+                  style="transition: transform 0.3s ease; cursor: pointer;"
+                  onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                  data-bs-toggle="modal"
+                  data-bs-target="#sampleModal"
+                  data-media-src="{{ site.baseurl }}/img/work/{{ page[img] }}"
+                  data-media-type="image">
+                {% if page[caption] %}
+                <figcaption class="small text-muted">{{ page[caption] }}</figcaption>
+                {% endif %}
+              </figure>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
 
-  <div class="container-fluid">
-    <div class="row g-2">
-      {% for i in (1..4) %}
-      {% assign img = "sample-img-" | append: i %}
-      {% assign alt = "sample-img-alt-" | append: i %}
-      {% assign caption = "sample-img-caption-" | append: i %}
-      {% if page[img] %}
-      <div class="col-6">
-        <figure class="text-center">
-          <img
-  src="{{ site.baseurl }}/img/work/{{ page[img] }}"
-  alt="{{ page[alt] }}"
-  class="img-fluid rounded"
-  style="transition: transform 0.3s ease; cursor: pointer;"
-  onmouseover="this.style.transform='scale(1.1)'"
-  onmouseout="this.style.transform='scale(1)'">
-          {% if page[caption] %}
-          <figcaption class="small text-muted">{{ page[caption] }}</figcaption>
+          <!-- Videos Section -->
+          {% assign has_videos = false %}
+          {% for i in (1..4) %}
+          {% assign video = "sample-video-" | append: i %}
+          {% if page[video] %}
+          {% assign has_videos = true %}
+          {% break %}
           {% endif %}
-        </figure>
+          {% endfor %}
+
+          {% if has_videos %}
+          <div class="row g-2 mt-3">
+            {% for i in (1..4) %}
+            {% assign video = "sample-video-" | append: i %}
+            {% assign video_alt = "sample-video-alt-" | append: i %}
+            {% assign video_caption = "sample-video-caption-" | append: i %}
+            {% assign video_thumbnail = "sample-video-thumbnail-" | append: i %}
+            {% if page[video] %}
+            <div class="col-6">
+              <figure class="text-center">
+                <div
+                  class="video-thumbnail rounded"
+                  style="position: relative; overflow: hidden; background: #000; cursor: pointer; transition: transform 0.3s ease;"
+                  onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                  data-bs-toggle="modal"
+                  data-bs-target="#sampleModal"
+                  data-media-src="{{ site.baseurl }}/img/work/{{ page[video] }}"
+                  data-media-type="video">
+                  {% if page[video_thumbnail] %}
+                  <img
+                    src="{{ site.baseurl }}/img/work/{{ page[video_thumbnail] }}"
+                    alt="{{ page[video_alt] }}"
+                    class="img-fluid rounded"
+                    style="width: 100%; display: block;">
+                  {% else %}
+                  <div style="width: 100%; padding-bottom: 100%; background: #333;"></div>
+                  {% endif %}
+                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem;">
+                    ▶
+                  </div>
+                </div>
+                {% if page[video_caption] %}
+                <figcaption class="small text-muted mt-2">{{ page[video_caption] }}</figcaption>
+                {% endif %}
+              </figure>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
       </div>
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
-
     </div>
   </div>
 
-
-<!-- Bootstrap modal for enlarging images -->
-<div class="modal fade" id="sampleModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content bg-transparent border-0">
-      <img id="modalImage" src="" alt="" class="img-fluid rounded">
+  <!-- Bootstrap modal for enlarging images and videos -->
+  <div class="modal fade" id="sampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 600px;">
+      <div class="modal-content bg-transparent border-0">
+        <img id="modalImage" src="" alt="" class="img-fluid rounded" style="display: none;">
+        <video id="modalVideo" class="rounded" style="display: none; max-width: 100%; height: auto;" controls>
+          <source src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
-</div>  
 </main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sampleModal = document.getElementById('sampleModal');
+    
+    // Handle both image and video thumbnails
+    document.querySelectorAll('[data-media-src]').forEach(function(element) {
+      element.addEventListener('click', function() {
+        const mediaSrc = this.getAttribute('data-media-src');
+        const mediaType = this.getAttribute('data-media-type');
+        const modalImage = document.getElementById('modalImage');
+        const modalVideo = document.getElementById('modalVideo');
+        
+        if (mediaType === 'image') {
+          modalImage.src = mediaSrc;
+          modalImage.style.display = 'block';
+          modalVideo.style.display = 'none';
+        } else if (mediaType === 'video') {
+          modalVideo.querySelector('source').src = mediaSrc;
+          modalVideo.load();
+          modalVideo.style.display = 'block';
+          modalImage.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
 {% include footer.html %}
