@@ -4,7 +4,7 @@ layout: work
 {% include header.html %}
 {% include nav.html %}
 <main>
-  <div class="container-fluid" style="padding-left: 3in; padding-right: 3in;">
+  <div class="container-fluid" style="padding-left: 1in; padding-right: 1in;">
     <!-- Jumbotron/Title at very top -->
     <div class="row mb-4">
       <div class="col-12">
@@ -25,6 +25,67 @@ layout: work
     {% endfor %}
 
     {% if page.samples-title or has_videos %}
+    {% assign samples_layout = page.samples-layout | default: 'split' %}
+    
+    {% if samples_layout == 'line' %}
+    <!-- Samples in a single line -->
+    <div class="row mb-4 g-0" style="margin-left: 0; margin-right: 0; overflow-x: auto;">
+      {% if page.samples-title %}
+      <h2 class="mb-3" style="width: 100%;">{{ page.samples-title }}</h2>
+      {% endif %}
+      
+      <!-- Video in line -->
+      {% if has_videos %}
+      <div style="flex: 0 0 25%; padding-left: 0; padding-right: 0; min-width: 200px;">
+        {% for i in (1..1) %}
+        {% assign video = "sample-video-" | append: i %}
+        {% assign video_caption = "sample-video-caption-" | append: i %}
+        {% if page[video] %}
+        <figure class="text-center m-0">
+          <video
+            class="img-fluid"
+            style="width: 100%; height: auto; background: #000; display: block;"
+            controls
+            preload="metadata">
+            <source src="{{ site.baseurl }}/img/work/{{ page[video] }}" type="video/mp4">
+            <source src="{{ site.baseurl }}/img/work/{{ page[video] }}" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+          {% if page[video_caption] %}
+          <figcaption class="small text-muted mt-2">{{ page[video_caption] }}</figcaption>
+          {% endif %}
+        </figure>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <!-- Images in line -->
+      {% for i in (1..4) %}
+      {% assign img = "sample-img-" | append: i %}
+      {% assign alt = "sample-img-alt-" | append: i %}
+      {% if page[img] %}
+      <div style="flex: 0 0 18.75%; padding-left: 0; padding-right: 0; min-width: 150px; position: relative; overflow: visible;">
+        <figure class="text-center m-0" style="position: relative;">
+          <img
+            src="{{ site.baseurl }}/img/work/{{ page[img] }}"
+            alt="{{ page[alt] }}"
+            class="img-fluid"
+            style="transition: transform 0.3s ease; cursor: pointer; display: block; width: 100%; height: auto; position: relative; z-index: 1;"
+            onmouseover="this.style.transform='scale(1.1)'; this.style.zIndex='10';"
+            onmouseout="this.style.transform='scale(1)'; this.style.zIndex='1';"
+            data-bs-toggle="modal"
+            data-bs-target="#sampleModal"
+            data-media-src="{{ site.baseurl }}/img/work/{{ page[img] }}"
+            data-media-type="image">
+        </figure>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    
+    {% else %}
+    <!-- Samples split layout (default) -->
     <div class="row mb-4 g-0" style="margin-left: 0; margin-right: 0;">
       {% if page.samples-title %}
       <h2 class="mb-3">{{ page.samples-title }}</h2>
@@ -64,15 +125,15 @@ layout: work
           {% assign alt = "sample-img-alt-" | append: i %}
           <!-- {% assign caption = "sample-img-caption-" | append: i %} -->
           {% if page[img] %}
-          <div class="col-6" style="padding-left: 0; padding-right: 0;">
-            <figure class="text-center m-0">
+          <div class="col-6" style="padding-left: 0; padding-right: 0; position: relative; overflow: visible;">
+            <figure class="text-center m-0" style="position: relative;">
               <img
                 src="{{ site.baseurl }}/img/work/{{ page[img] }}"
                 alt="{{ page[alt] }}"
                 class="img-fluid"
-                style="transition: transform 0.3s ease; cursor: pointer; display: block; width: 100%; height: auto;"
-                onmouseover="this.style.transform='scale(1.1)'"
-                onmouseout="this.style.transform='scale(1)'"
+                style="transition: transform 0.3s ease; cursor: pointer; display: block; width: 100%; height: auto; position: relative; z-index: 1;"
+                onmouseover="this.style.transform='scale(1.1)'; this.style.zIndex='10';"
+                onmouseout="this.style.transform='scale(1)'; this.style.zIndex='1';"
                 data-bs-toggle="modal"
                 data-bs-target="#sampleModal"
                 data-media-src="{{ site.baseurl }}/img/work/{{ page[img] }}"
@@ -87,6 +148,7 @@ layout: work
         </div>
       </div>
     </div>
+    {% endif %}
     {% endif %}
     
     <div class="row mb-4">

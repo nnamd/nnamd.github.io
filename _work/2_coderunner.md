@@ -12,7 +12,7 @@ tools:
   - Docker
   - AWS EC2, RDS
 
-
+samples-layout: line
 samples-title: Screenshots
 sample-img-1: IOS-Final_Main_change.png
 
