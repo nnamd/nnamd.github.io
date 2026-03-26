@@ -10,10 +10,9 @@ tools:
   - Python
   - Flutter & Dart
   - Docker
-  - AWS EC2, RDS
+  - AWS (EC2, RDS)
 
 samples-layout: line
-samples-title: Screenshots
 sample-img-1: IOS-Final_Main_change.png
 
 sample-img-2: final_timer_iphone.png
