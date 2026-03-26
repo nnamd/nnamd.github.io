@@ -84,35 +84,17 @@ layout: work
           <div class="row g-2 mt-3">
             {% for i in (1..4) %}
             {% assign video = "sample-video-" | append: i %}
-            {% assign video_alt = "sample-video-alt-" | append: i %}
             {% assign video_caption = "sample-video-caption-" | append: i %}
-            {% assign video_thumbnail = "sample-video-thumbnail-" | append: i %}
             {% if page[video] %}
             <div class="col-6">
               <figure class="text-center">
-                <button
-                  type="button"
-                  class="video-thumbnail btn btn-link p-0 rounded"
-                  style="position: relative; overflow: hidden; background: #000; cursor: pointer; transition: transform 0.3s ease; border: none; width: 100%;"
-                  onmouseover="this.style.transform='scale(1.1)'"
-                  onmouseout="this.style.transform='scale(1)'"
-                  data-bs-toggle="modal"
-                  data-bs-target="#sampleModal"
-                  data-media-src="{{ site.baseurl }}/img/work/{{ page[video] }}"
-                  data-media-type="video">
-                  {% if page[video_thumbnail] %}
-                  <img
-                    src="{{ site.baseurl }}/img/work/{{ page[video_thumbnail] }}"
-                    alt="{{ page[video_alt] }}"
-                    class="img-fluid rounded"
-                    style="width: 100%; display: block;">
-                  {% else %}
-                  <div style="width: 100%; padding-bottom: 100%; background: #333;"></div>
-                  {% endif %}
-                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; pointer-events: none;">
-                    ▶
-                  </div>
-                </button>
+                <video
+                  src="{{ site.baseurl }}/img/work/{{ page[video] }}"
+                  class="img-fluid rounded"
+                  style="max-width: 100%; height: auto; background: #000;"
+                  controls>
+                  Your browser does not support the video tag.
+                </video>
                 {% if page[video_caption] %}
                 <figcaption class="small text-muted mt-2">{{ page[video_caption] }}</figcaption>
                 {% endif %}
@@ -145,24 +127,14 @@ layout: work
   document.addEventListener('DOMContentLoaded', function() {
     const sampleModal = document.getElementById('sampleModal');
     
-    // Handle both image and video thumbnails
-    document.querySelectorAll('[data-media-src]').forEach(function(element) {
+    // Handle image clicks only (videos now play directly inline)
+    document.querySelectorAll('img[data-media-src]').forEach(function(element) {
       element.addEventListener('click', function() {
         const mediaSrc = this.getAttribute('data-media-src');
-        const mediaType = this.getAttribute('data-media-type');
         const modalImage = document.getElementById('modalImage');
-        const modalVideo = document.getElementById('modalVideo');
         
-        if (mediaType === 'image') {
-          modalImage.src = mediaSrc;
-          modalImage.style.display = 'block';
-          modalVideo.style.display = 'none';
-        } else if (mediaType === 'video') {
-          modalVideo.querySelector('source').src = mediaSrc;
-          modalVideo.load();
-          modalVideo.style.display = 'block';
-          modalImage.style.display = 'none';
-        }
+        modalImage.src = mediaSrc;
+        modalImage.style.display = 'block';
       });
     });
   });
