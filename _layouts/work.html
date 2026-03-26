@@ -23,22 +23,22 @@ layout: work
     {% endfor %}
 
     {% if page.samples-title or has_videos %}
-    <div class="row mb-4">
-      <!-- {% if page.samples-title %}
+    <div class="row mb-4 g-0">
+      {% if page.samples-title %}
       <h2 class="mb-3">{{ page.samples-title }}</h2>
-      {% endif %} -->
+      {% endif %}
       
       <!-- Video on the left (double height) -->
       {% if has_videos %}
-      <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+      <div class="col-lg-6 col-md-6 col-sm-12">
         {% for i in (1..1) %}
         {% assign video = "sample-video-" | append: i %}
         {% assign video_caption = "sample-video-caption-" | append: i %}
         {% if page[video] %}
-        <figure class="text-center">
+        <figure class="text-center m-0">
           <video
-            class="img-fluid rounded"
-            style="width: 100%; height: auto; background: #000;"
+            class="img-fluid"
+            style="width: 100%; height: auto; background: #000; display: block;"
             controls
             preload="metadata">
             <source src="{{ site.baseurl }}/img/work/{{ page[video] }}" type="video/mp4">
@@ -56,19 +56,19 @@ layout: work
 
       <!-- Images on the right (4 grid) -->
       <div class="col-lg-6 col-md-6 col-sm-12">
-        <div class="row g-2">
+        <div class="row g-0">
           {% for i in (1..4) %}
           {% assign img = "sample-img-" | append: i %}
           {% assign alt = "sample-img-alt-" | append: i %}
           {% assign caption = "sample-img-caption-" | append: i %}
           {% if page[img] %}
           <div class="col-6">
-            <figure class="text-center">
+            <figure class="text-center m-0">
               <img
                 src="{{ site.baseurl }}/img/work/{{ page[img] }}"
                 alt="{{ page[alt] }}"
-                class="img-fluid rounded"
-                style="transition: transform 0.3s ease; cursor: pointer;"
+                class="img-fluid"
+                style="transition: transform 0.3s ease; cursor: pointer; display: block; width: 100%; height: auto;"
                 onmouseover="this.style.transform='scale(1.1)'"
                 onmouseout="this.style.transform='scale(1)'"
                 data-bs-toggle="modal"
