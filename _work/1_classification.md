@@ -1,5 +1,5 @@
 ---
-title: Classification and Dataset Collection For the Laban Efforts 
+title: Classifying Stylized Robot Motion
 description: Machine Learning
 img-feat: Effort_Classifier.png
 website: 
@@ -14,11 +14,11 @@ tools:
 
 sample-img-1: Flow.png
 sample-img-alt-1: Flow Image 
-sample-img-caption-1: Example Image of Stylized Demonstration From Participant (Flow)
+# sample-img-caption-1: Example Image of Stylized Demonstration From Participant (Flow)
 
 sample-img-2: Space.png
 sample-img-alt-2: Space Image 
-sample-img-caption-2: Example Image of Stylized Demonstration From Participant (Space)
+# sample-img-caption-2: Example Image of Stylized Demonstration From Participant (Space)
 
 sample-video-1: arm_quality.mp4
 sample-video-alt-1: Video description
