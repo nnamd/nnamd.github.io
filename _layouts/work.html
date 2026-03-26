@@ -25,14 +25,14 @@ layout: work
     {% endfor %}
 
     {% if page.samples-title or has_videos %}
-    <div class="row mb-4 g-0">
+    <div class="row mb-4 g-0" style="margin-left: 0; margin-right: 0;">
       {% if page.samples-title %}
       <h2 class="mb-3">{{ page.samples-title }}</h2>
       {% endif %}
       
       <!-- Video on the left (double height) -->
       {% if has_videos %}
-      <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="col-lg-6 col-md-6 col-sm-12" style="padding-left: 0; padding-right: 0;">
         {% for i in (1..1) %}
         {% assign video = "sample-video-" | append: i %}
         {% assign video_caption = "sample-video-caption-" | append: i %}
@@ -57,14 +57,14 @@ layout: work
       {% endif %}
 
       <!-- Images on the right (4 grid) -->
-      <div class="col-lg-6 col-md-6 col-sm-12">
-        <div class="row g-0">
+      <div class="col-lg-6 col-md-6 col-sm-12" style="padding-left: 0; padding-right: 0;">
+        <div class="row g-0" style="margin-left: 0; margin-right: 0;">
           {% for i in (1..4) %}
           {% assign img = "sample-img-" | append: i %}
           {% assign alt = "sample-img-alt-" | append: i %}
           <!-- {% assign caption = "sample-img-caption-" | append: i %} -->
           {% if page[img] %}
-          <div class="col-6">
+          <div class="col-6" style="padding-left: 0; padding-right: 0;">
             <figure class="text-center m-0">
               <img
                 src="{{ site.baseurl }}/img/work/{{ page[img] }}"
