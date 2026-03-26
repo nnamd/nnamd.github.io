@@ -90,9 +90,10 @@ layout: work
             {% if page[video] %}
             <div class="col-6">
               <figure class="text-center">
-                <div
-                  class="video-thumbnail rounded"
-                  style="position: relative; overflow: hidden; background: #000; cursor: pointer; transition: transform 0.3s ease;"
+                <button
+                  type="button"
+                  class="video-thumbnail btn btn-link p-0 rounded"
+                  style="position: relative; overflow: hidden; background: #000; cursor: pointer; transition: transform 0.3s ease; border: none; width: 100%;"
                   onmouseover="this.style.transform='scale(1.1)'"
                   onmouseout="this.style.transform='scale(1)'"
                   data-bs-toggle="modal"
@@ -108,10 +109,10 @@ layout: work
                   {% else %}
                   <div style="width: 100%; padding-bottom: 100%; background: #333;"></div>
                   {% endif %}
-                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem;">
+                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; pointer-events: none;">
                     ▶
                   </div>
-                </div>
+                </button>
                 {% if page[video_caption] %}
                 <figcaption class="small text-muted mt-2">{{ page[video_caption] }}</figcaption>
                 {% endif %}
