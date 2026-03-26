@@ -4,109 +4,104 @@ layout: work
 {% include header.html %}
 {% include nav.html %}
 <main>
-  <div class="container-fluid">
-    <div class="row align-items-start">
-      <!-- Left side: title/jumbotron + main content -->
-      <div class="col-lg-8 col-md-7 col-sm-12">
-        {% include jumbotron.html %}
-        {{ content | markdownify }}
-        <div class="row mt-4">
-          <div class="col-sm-6">
-            {% if page.methods %}
-            {% assign methods = page.methods %}
-            <h2>Methods</h2>
-            <ul>
-              {% for method in methods %}
-              <li>{{ method }}</li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-          </div>
-          <div class="col-sm-6">
-            {% if page.tools %}
-            {% assign tools = page.tools %}
-            <h2>Tools</h2>
-            <ul>
-              {% for tool in tools %}
-              <li>{{ tool }}</li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-      <!-- Right side: samples start at the top -->
-      <div class="col-lg-4 col-md-5 col-sm-12">
-        {% if page.samples-title %}
-        <h2 class="mb-3">{{ page.samples-title }}</h2>
-        {% endif %}
-        <div class="container-fluid">
-          <!-- Images Section -->
-          <div class="row g-2">
-            {% for i in (1..4) %}
-            {% assign img = "sample-img-" | append: i %}
-            {% assign alt = "sample-img-alt-" | append: i %}
-            {% assign caption = "sample-img-caption-" | append: i %}
-            {% if page[img] %}
-            <div class="col-6">
-              <figure class="text-center">
-                <img
-                  src="{{ site.baseurl }}/img/work/{{ page[img] }}"
-                  alt="{{ page[alt] }}"
-                  class="img-fluid rounded"
-                  style="transition: transform 0.3s ease; cursor: pointer;"
-                  onmouseover="this.style.transform='scale(1.1)'"
-                  onmouseout="this.style.transform='scale(1)'"
-                  data-bs-toggle="modal"
-                  data-bs-target="#sampleModal"
-                  data-media-src="{{ site.baseurl }}/img/work/{{ page[img] }}"
-                  data-media-type="image">
-                {% if page[caption] %}
-                <figcaption class="small text-muted">{{ page[caption] }}</figcaption>
-                {% endif %}
-              </figure>
-            </div>
-            {% endif %}
-            {% endfor %}
-          </div>
+  <div class="container-fluid" style="padding-left: 1in; padding-right: 1in;">
+    <!-- Samples Section at Top -->
+    {% assign has_videos = false %}
+    {% for i in (1..4) %}
+    {% assign video = "sample-video-" | append: i %}
+    {% if page[video] %}
+    {% assign has_videos = true %}
+    {% break %}
+    {% endif %}
+    {% endfor %}
 
-          <!-- Videos Section -->
-          {% assign has_videos = false %}
+    {% if page.samples-title or has_videos %}
+    <div class="row mb-4">
+      {% if page.samples-title %}
+      <h2 class="mb-3">{{ page.samples-title }}</h2>
+      {% endif %}
+      
+      <!-- Video on the left (double height) -->
+      {% if has_videos %}
+      <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+        {% for i in (1..1) %}
+        {% assign video = "sample-video-" | append: i %}
+        {% assign video_caption = "sample-video-caption-" | append: i %}
+        {% if page[video] %}
+        <figure class="text-center">
+          <video
+            class="img-fluid rounded"
+            style="width: 100%; height: auto; background: #000;"
+            controls
+            preload="metadata">
+            <source src="{{ site.baseurl }}/img/work/{{ page[video] }}" type="video/mp4">
+            <source src="{{ site.baseurl }}/img/work/{{ page[video] }}" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+          {% if page[video_caption] %}
+          <figcaption class="small text-muted mt-2">{{ page[video_caption] }}</figcaption>
+          {% endif %}
+        </figure>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <!-- Images on the right (4 grid) -->
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="row g-2">
           {% for i in (1..4) %}
-          {% assign video = "sample-video-" | append: i %}
-          {% if page[video] %}
-          {% assign has_videos = true %}
-          {% break %}
+          {% assign img = "sample-img-" | append: i %}
+          {% assign alt = "sample-img-alt-" | append: i %}
+          {% assign caption = "sample-img-caption-" | append: i %}
+          {% if page[img] %}
+          <div class="col-6">
+            <figure class="text-center">
+              <img
+                src="{{ site.baseurl }}/img/work/{{ page[img] }}"
+                alt="{{ page[alt] }}"
+                class="img-fluid rounded"
+                style="transition: transform 0.3s ease; cursor: pointer;"
+                onmouseover="this.style.transform='scale(1.1)'"
+                onmouseout="this.style.transform='scale(1)'"
+                data-bs-toggle="modal"
+                data-bs-target="#sampleModal"
+                data-media-src="{{ site.baseurl }}/img/work/{{ page[img] }}"
+                data-media-type="image">
+              {% if page[caption] %}
+              <figcaption class="small text-muted">{{ page[caption] }}</figcaption>
+              {% endif %}
+            </figure>
+          </div>
           {% endif %}
           {% endfor %}
-
-          {% if has_videos %}
-          <div class="row g-2 mt-3">
-            {% for i in (1..4) %}
-            {% assign video = "sample-video-" | append: i %}
-            {% assign video_caption = "sample-video-caption-" | append: i %}
-            {% if page[video] %}
-            <div class="col-6">
-              <figure class="text-center">
-                <video
-                  src="{{ site.baseurl }}/img/work/{{ page[video] }}"
-                  class="img-fluid rounded"
-                  style="max-width: 100%; height: auto; background: #000;"
-                  controls>
-                  Your browser does not support the video tag.
-                </video>
-                {% if page[video_caption] %}
-                <figcaption class="small text-muted mt-2">{{ page[video_caption] }}</figcaption>
-                {% endif %}
-              </figure>
-            </div>
-            {% endif %}
-            {% endfor %}
-          </div>
-          {% endif %}
         </div>
       </div>
     </div>
+    {% endif %}
+
+    <!-- Main content -->
+    <div class="row">
+      <div class="col-12">
+        {% include jumbotron.html %}
+        {{ content | markdownify }}
+      </div>
+    </div>
+
+    <!-- Combined Methods and Tools at bottom -->
+    {% assign combined_items = page.methods | concat: page.tools | compact %}
+    {% if combined_items.size > 0 %}
+    <div class="row mt-5">
+      <div class="col-12">
+        <h2>Methods & Tools</h2>
+        <ul style="columns: 2; column-gap: 2rem;">
+          {% for item in combined_items %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
   </div>
 
   <!-- Bootstrap modal for enlarging images and videos -->
