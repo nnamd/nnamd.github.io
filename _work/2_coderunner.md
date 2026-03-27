@@ -13,6 +13,7 @@ tools:
   - Docker
   - AWS (EC2, RDS)
 
+samples_layout: line
 samples-title: Test
 sample-img-1: IOS-Final_Main_change.png
 sample-img-alt-1: Main Image
