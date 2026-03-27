@@ -22,59 +22,62 @@ layout: work
     
     {% if samples_layout == 'line' %}
     <!-- Samples in a single line -->
-    <div class="mb-4" style="display: flex; flex-wrap: wrap; gap: 0; margin-left: 0; margin-right: 0;">
+    <div class="mb-4" style="display: flex; flex-wrap: nowrap; gap: 0; width: 100%;">
       <!-- {% if page.samples-title %}
-      <h2 class="mb-3" style="width: 100%;">{{ page.samples-title }}</h2>
+      <div style="width: 100%; margin-bottom: 1rem;">
+        <h2 class="mb-3">{{ page.samples-title }}</h2>
+      </div>
       {% endif %} -->
       
-      <!-- Video in line -->
-      {% if has_videos %}
-      <div style="flex: 0 0 25%; padding-left: 0; padding-right: 0; min-width: 200px; position: relative; overflow: visible;">
-        {% for i in (1..1) %}
-        {% assign video = "sample-video-" | append: i %}
-        {% assign video_caption = "sample-video-caption-" | append: i %}
-        {% if page[video] %}
-        <figure class="text-center m-0" style="position: relative;">
-          <video
-            class="img-fluid"
-            style="width: 100%; height: auto; background: #000; display: block; position: relative; z-index: 1;"
-            controls
-            preload="metadata">
-            <source src="{{ site.baseurl }}/img/work/{{ page[video] }}" type="video/mp4">
-            <source src="{{ site.baseurl }}/img/work/{{ page[video] }}" type="video/webm">
-            Your browser does not support the video tag.
-          </video>
-          {% if page[video_caption] %}
-          <figcaption class="small text-muted mt-2">{{ page[video_caption] }}</figcaption>
+      <!-- Flex container for items -->
+      <div style="display: flex; width: 100%; gap: 0;">
+        <!-- Video in line -->
+        {% if has_videos %}
+        <div style="flex: 1; min-width: 0; position: relative; overflow: visible;">
+          {% for i in (1..1) %}
+          {% assign video = "sample-video-" | append: i %}
+          {% assign video_caption = "sample-video-caption-" | append: i %}
+          {% if page[video] %}
+          <figure class="text-center m-0">
+            <video
+              style="width: 100%; height: auto; background: #000; display: block;"
+              controls
+              preload="metadata">
+              <source src="{{ site.baseurl }}/img/work/{{ page[video] }}" type="video/mp4">
+              <source src="{{ site.baseurl }}/img/work/{{ page[video] }}" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            {% if page[video_caption] %}
+            <figcaption class="small text-muted mt-2">{{ page[video_caption] }}</figcaption>
+            {% endif %}
+          </figure>
           {% endif %}
-        </figure>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Images in line -->
+        {% for i in (1..4) %}
+        {% assign img = "sample-img-" | append: i %}
+        {% assign alt = "sample-img-alt-" | append: i %}
+        {% if page[img] %}
+        <div style="flex: 1; min-width: 0; position: relative; overflow: visible;">
+          <figure class="text-center m-0">
+            <img
+              src="{{ site.baseurl }}/img/work/{{ page[img] }}"
+              alt="{{ page[alt] }}"
+              style="width: 100%; height: auto; display: block; position: relative; z-index: 1; transition: transform 0.3s ease; cursor: pointer;"
+              onmouseover="this.style.transform='scale(1.1)'; this.style.zIndex='10';"
+              onmouseout="this.style.transform='scale(1)'; this.style.zIndex='1';"
+              data-bs-toggle="modal"
+              data-bs-target="#sampleModal"
+              data-media-src="{{ site.baseurl }}/img/work/{{ page[img] }}"
+              data-media-type="image">
+          </figure>
+        </div>
         {% endif %}
         {% endfor %}
       </div>
-      {% endif %}
-
-      <!-- Images in line -->
-      {% for i in (1..4) %}
-      {% assign img = "sample-img-" | append: i %}
-      {% assign alt = "sample-img-alt-" | append: i %}
-      {% if page[img] %}
-      <div style="flex: 0 0 18.75%; padding-left: 0; padding-right: 0; min-width: 150px; position: relative; overflow: visible;">
-        <figure class="text-center m-0" style="position: relative;">
-          <img
-            src="{{ site.baseurl }}/img/work/{{ page[img] }}"
-            alt="{{ page[alt] }}"
-            class="img-fluid"
-            style="transition: transform 0.3s ease; cursor: pointer; display: block; width: 100%; height: auto; position: relative; z-index: 1;"
-            onmouseover="this.style.transform='scale(1.1)'; this.style.zIndex='10';"
-            onmouseout="this.style.transform='scale(1)'; this.style.zIndex='1';"
-            data-bs-toggle="modal"
-            data-bs-target="#sampleModal"
-            data-media-src="{{ site.baseurl }}/img/work/{{ page[img] }}"
-            data-media-type="image">
-        </figure>
-      </div>
-      {% endif %}
-      {% endfor %}
     </div>
     
     {% else %}
