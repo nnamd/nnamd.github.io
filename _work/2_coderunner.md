@@ -1,7 +1,7 @@
 ---
-title: Classifying Robot Style
-description: Machine Learning
-img-feat: Effort_Classifier.png
+title: The Code Runner 
+description: Full-stack App Development
+img-feat: app_logo.png
 website: 
 methods:
   - Classical Machine Learning
@@ -12,15 +12,9 @@ tools:
   - R
 
 
-sample-img-1: IOS-Final_Main_change.png
+sample-img-1: cnn.png
 sample-img-alt-1: Main Image
-sample-img-2: final_timer_iphone.png
-sample-img-alt-2: Timer Image
 
-sample-img-3: IOS-Final.png
-sample-img-alt-3: IOS Image
-sample-img-4: final_pdf_iphone.png
-sample-img-alt-4: PDF Image
 ---
 
 
