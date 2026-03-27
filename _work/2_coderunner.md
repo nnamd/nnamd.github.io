@@ -13,7 +13,7 @@ tools:
   - AWS (EC2, RDS)
 
 
-sample-img-1: IOS-Final_Main_change.png
+sample-img-1: cnn.png
 
 sample-img-2: final_timer_iphone.png
 
