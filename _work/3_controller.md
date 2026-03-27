@@ -14,10 +14,10 @@ samples-title: Samples
 
 sample-img-1: sim_results.gif
 sample-img-alt-1: Bravo Arm Simulation 
-sample-img-caption-1: Gif of Simulated Forces on Bravo Arm
+#sample-img-caption-1: Gif of Simulated Forces on Bravo Arm
 sample-img-2: hardware.gif
 sample-img-alt-2: Admittance Control On Real Hardware 
-sample-img-caption-2: Gif of Real Forces on Bravo Arm
+#sample-img-caption-2: Gif of Real Forces on Bravo Arm
 sample-img-3: admittance_sim_plot.png
 sample-img-alt-3: Admittance Control Sim Plot
 sample-img-caption-3: The real admittance controller response on the Bravo 7 when force is applied to the manipulator’s end effector

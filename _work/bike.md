@@ -13,16 +13,16 @@ tools:
 samples-title: Samples
 sample-img-1: bike.png
 sample-img-alt-1: Full CAD of new bike
-sample-img-caption-1: Full CAD of new bike
+#sample-img-caption-1: Full CAD of new bike
 sample-img-2: acrylic.jpg
 sample-img-alt-2: Work example 2 screenshot
-sample-img-caption-2: Acrylic for electronics mounted to bike
+#sample-img-caption-2: Acrylic for electronics mounted to bike
 sample-img-3: topframebracket.jpg
 sample-img-alt-3: Top Frame Bracket Mounted
-sample-img-caption-3: Top Frame Bracket Mounted
+#sample-img-caption-3: Top Frame Bracket Mounted
 sample-img-4: bottomframebracket.jpg
 sample-img-alt-4: Bottom Frame Bracket Mounted
-sample-img-caption-4: Bottom Frame Bracket Mounted
+#sample-img-caption-4: Bottom Frame Bracket Mounted
 ---
 
 ## Overview
