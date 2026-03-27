@@ -15,12 +15,12 @@ tools:
 
 sample-img-1: cnn.png
 
-sample-img-2: final_timer_iphone.png
+# sample-img-2: final_timer_iphone.png
 
 
-sample-img-3: IOS-Final.png
+# sample-img-3: IOS-Final.png
 
-sample-img-4: final_pdf_iphone.png
+# sample-img-4: final_pdf_iphone.png
 
 
 
