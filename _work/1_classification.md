@@ -5,7 +5,7 @@ img-feat: Effort_Classifier.png
 website: 
 methods:
   - Classical Machine Learning
-  - Feature Importance
+  - Feature Importanceazzz
 tools:
   - SkLearn/Sci-Kit
   - Python
