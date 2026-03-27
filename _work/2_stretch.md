@@ -1,7 +1,7 @@
 ---
 title: Various Stretch RE2 Projects
 description: Behavioral Studies & Applied Robotics
-img-feat: Effort_Classifier.png
+img-feat: stretch.JPG
 website: 
 methods:
   - Human Subject Studies
